@@ -15,7 +15,9 @@ module.exports = function omitDeepLodash(input, props) {
     }
 
     const o = {};
-    for (const [key, value] of Object.entries(obj)) {
+    var value;
+    for (const key of Object.keys(obj)) {
+      value = obj[key];
       o[key] = !isNil(value) ? omitDeepLodash(value, props) : value;
     }
 
