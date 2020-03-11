@@ -19,7 +19,8 @@
   "scripts": {
     "test": "npm run compile && mocha && eslint . --cache",
     "compile": "gulp",
-    "prepublish": "npm run compile"
+    "prepublish": "npm run compile",
+    "prepare": "npm run compile"
   },
   "dependencies": {
     "lodash": "~4.17.11"
